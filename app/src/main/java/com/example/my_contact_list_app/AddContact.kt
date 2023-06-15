@@ -45,7 +45,7 @@ class AddContacts : AppCompatActivity() {
         }
         if (email.isEmpty()) {
             binding.tillNumber.error = "Phone Number required"
-//            Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show();
             error = true
         }
         if (!error) {
