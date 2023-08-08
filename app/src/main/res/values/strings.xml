@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My-Contact-list-App</string>
+    <string name="last_name_required">Last Name required</string>
+    <string name="first_name_required">First Name required</string>
+    <string name="lastname">LastName</string>
+    <string name="firstname">FirstName</string>
+    <string name="password_required">Password required</string>
+    <string name="phone_number_required">Phone Number required</string>
+    <string name="email">Email</string>
+    <string name="phonenumber">Phonenumber</string>
 </resources>

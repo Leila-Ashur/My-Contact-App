@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/color"
     tools:context=".AddContact">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -19,7 +20,8 @@
             android:id="@+id/etLast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LastName" />
+            android:textColor="@color/white"
+            android:hint="@string/lastname" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -35,7 +37,8 @@
             android:id="@+id/etFast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="FirstName" />
+            android:textColor="@color/white"
+            android:hint="@string/firstname" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -51,7 +54,8 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email" />
+            android:textColor="@color/white"
+            android:hint="@string/email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -60,13 +64,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/tillLast">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phonenumber" />
+            android:textColor="@color/white"
+            android:hint="@string/phonenumber" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

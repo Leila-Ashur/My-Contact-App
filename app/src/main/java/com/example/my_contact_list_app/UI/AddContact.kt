@@ -1,9 +1,11 @@
-package com.example.my_contact_list_app
+package com.example.my_contact_list_app.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.Contacts
 import android.widget.Toast
+import com.example.my_contact_list_app.R
 import com.example.my_contact_list_app.databinding.ActivityAddContactBinding
 
 class AddContacts : AppCompatActivity() {
@@ -29,32 +31,35 @@ class AddContacts : AppCompatActivity() {
 
         var error = false
         if (name.isEmpty()) {
-            binding.tillFast.error = "First Namerequired"
-//            Toast.makeText(this, "Please enter phone number", Toast.LENGTH_SHORT).show();
+            binding.tillFast.error = getString(R.string.first_name_required)
+
             error = true
         }
         if (name.isEmpty()) {
-            binding.tillLast.error = "Last Namerequired"
-//            Toast.makeText(this, "Please enter first name", Toast.LENGTH_SHORT).show();
+            binding.tillLast.error = getString(R.string.last_name_required)
+
             error = true
         }
         if (name2.isEmpty()) {
-            binding.tillEmail.error = "Password required"
-//            Toast.makeText(this, "Please enter last name", Toast.LENGTH_SHORT).show();
+            binding.tillEmail.error = getString(R.string.password_required)
+
             error = true
         }
         if (email.isEmpty()) {
-            binding.tillNumber.error = "Phone Number required"
-           Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show();
+            binding.tillNumber.error = getString(R.string.phone_number_required)
+
             error = true
         }
         if (!error) {
             val intent = Intent(this, AddContacts::class.java)
             startActivity(intent)
+
+//            val newContacts= Contacts(0,name,phoneNumber,"email")
         }
         Toast.makeText(this, "Contact added successfully", Toast.LENGTH_SHORT).show();
         finish();
     }
+
 }
 
 
